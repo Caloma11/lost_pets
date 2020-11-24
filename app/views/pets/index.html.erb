@@ -1,0 +1,13 @@
+<h1>These are all my pets</h1>
+
+<div class="container">
+
+  <ul>
+    <% @pets.each do |pet| %>
+      <li class="px-3 my-3"><%= link_to pet.name, pet_path(pet) %> - <%= link_to "Edit", edit_pet_path(pet), class: "btn-sm btn-warning" %> - <%= link_to "Delete", pet_path(pet), method: :delete, data: { confirm: "Are you sure?"}, class: "btn-sm btn-danger" %></li>
+    <% end %>
+  </ul>
+
+
+</div>
+<%= link_to "Create your pet", new_pet_path %>

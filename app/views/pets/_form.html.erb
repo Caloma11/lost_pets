@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="px-5 d-flex justify-content-center">
+    <%= simple_form_for(@pet) do |f| %>
+      <%= f.input :name, required: false %>
+      <%= f.input :address %>
+      <%= f.input :species %>
+      <%= f.input :found_on, as: :date, html5: true %>
+      <%= f.submit %>
+    <% end %>
+
+  </div>
+</div>
+
